@@ -1,0 +1,7 @@
+Flask==0.10.1
+gunicorn==19.6.0
+itsdangerous==0.24
+Jinja2==2.8
+macholib==1.5.1
+py2app==0.7.3
+python-dateutil==1.5

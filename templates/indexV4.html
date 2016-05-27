@@ -1,0 +1,27 @@
+<html>
+	<head>
+			<title>My Weather App</title>
+			<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+			<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	</head>
+	<body>
+		<form>
+			View forcast for city: <input type="text" name="searchcity"> <input type="Submit" value="Submit">
+								   <input type="checkbox" name="remember"> Remember<br/ >
+		</form>
+		<h1>Weather forcast for {{city}}, {{country}}</h1>
+		<table border="1">
+			<tr>
+				<th>Date</th><th>Min</th><th>Max</th><th>Description</th>
+			</tr>
+			{% for day in forcast_list %}
+				<tr>
+					<td><center>{{day[0]}}</center></td>
+					<td><center>{{day[1]}} F</center></td>
+					<td><center>{{day[2]}} F</center></td>
+					<td><center>{{day[3]}}</center></td>
+				</tr>
+			{% endfor %}
+		</table>	
+	</body>
+</html>
